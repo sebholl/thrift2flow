@@ -23,9 +23,9 @@
  * SOFTWARE.
  */
 
-import {flowResultTest} from '../test-util';
+import { flowResultTest } from '../test-util';
 
-import {ThriftFileConverter} from '../main/convert';
+import { ThriftFileConverter } from '../main/convert';
 import path from 'path';
 // flowlint-next-line untyped-import:off
 import fs from 'fs-extra';
@@ -59,9 +59,9 @@ test('typedefs should reference enum types not value', () => {
 
 import * as base from \\"./base\\";
 
-export type TimeRangeByDayOfWeek = {
+export type TimeRangeByDayOfWeek = {|
   [$Values<typeof base.Weekday>]: base.TimeRange[]
-};
+|};
 "
 `);
 });
